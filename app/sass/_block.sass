@@ -1,0 +1,566 @@
+.bg-1
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	background: url(../images/dist/bg1.svg) no-repeat top
+	background-size: cover
+
+.bg-2
+	background: url(../images/dist/bg2.svg) no-repeat top
+	background-size: cover
+
+.bg-3
+	background: url(../images/dist/bg3.svg) no-repeat top
+	background-size: cover
+
+.bg-z-0
+	&~*
+		position: relative
+		z-index: 2
+
+.header
+	position: relative
+	z-index: 2
+	background: #fff
+	padding: 1.7rem 0
+	&__logo
+		display: flex
+		text-decoration: none
+		font-size: 1.6rem
+		line-height: 1.1
+		letter-spacing: 0.05em
+		margin-right: 6.4rem
+		&:hover
+			color: $accent
+		img
+			flex-shrink: 0
+			width: 6rem
+			margin-right: 0.5rem
+	.soc
+		margin-right: 5rem
+	.btn
+		width: 14rem
+		white-space: pre
+		&:not(:last-child)
+			margin-right: 3rem
+
+
+.main-menu
+	display: flex
+	align-items: center
+	flex-grow: 1
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin-right: auto
+		li
+			&:not(:last-child)
+				margin-right: 2rem
+		a
+			font-size: 1.4rem
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			font-weight: 600
+			text-decoration: none
+			&:hover
+				text-decoration: none
+				color: $text
+				opacity: 0.6
+	.current-menu-item
+		a
+			text-decoration: none
+			color: $text
+			opacity: 0.6
+
+.section
+	margin-bottom: 9.5rem
+
+.top-block
+	position: relative
+	padding-top: 4.5rem
+	overflow: visible
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__sub-title
+		font-size: 3rem
+		font-weight: 700
+		line-height: 1.4
+		margin-bottom: 3.5rem
+	p
+		font-size: 2.4rem
+		margin-bottom: 3.5rem
+		line-height: 1.4
+	&__list
+		max-width: 604rem
+		gap: 2.3rem 2.8rem
+		margin-bottom: 4rem
+		li
+			display: flex
+			align-items: flex-start
+			line-height: 1.1
+			i
+				width: 1.8rem
+				height: 1.8rem
+				img, svg
+					width: 100%
+	.btn
+		width: 27rem
+
+@media only screen and (min-width: 993px)
+	.top-block
+		p
+			max-width: 50rem
+		&__list
+			grid-template-columns: 9rem auto auto !important
+			li
+				white-space: pre
+		&__img
+			position: absolute
+			right: 0
+			bottom: 0
+			width: 60rem
+			z-index: 0
+			.top-block_2 &
+				width: 56rem
+				&::before
+					top: -2rem
+					left: -1.7rem
+			&::before
+				content: ''
+				display: block
+				top: -3.5rem
+				left: -3.5rem
+				right: 0.3rem
+				bottom: 3.5rem
+				border-radius: 1rem
+				border: 0.2rem dashed $accent
+				position: absolute
+				z-index: 0
+			img
+				position: relative
+				z-index: 2
+				border-radius: 1rem
+				box-shadow: 0px 4px 15px #FED359
+				width: 100%
+		&_2
+			padding-top: 10rem
+			padding-bottom: 6rem
+			.h1
+				margin-bottom: 4rem
+			p
+				max-width: 59rem
+				margin-bottom: 4rem
+			.top-block__img
+				img
+					border-radius: 1rem 0 0 1rem
+				&.brs-20
+					img
+						border-radius: 2rem 0 0 2rem
+		&_3
+			padding-top: 9rem
+			padding-bottom: 5rem
+			margin-bottom: 13.5rem
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 20rem
+				height: 31rem
+				background: url(../images/dist/dec1.svg) no-repeat center
+				background-size: contain
+				position: absolute
+				bottom: -10rem
+				left: 51%
+				transform: translateX(-50%)
+	.border-color-green
+		&::before
+			border-color: $green
+
+.block-4
+	&__img
+		position: relative
+		padding: 2rem 0 0 2rem
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 2rem
+			bottom: 2rem
+			border-radius: 2rem
+			border: 0.3rem dashed $accent
+		img
+			position: relative
+			z-index: 2
+			border-radius: 2rem
+
+.block-2, .block-4, .block-7, .block-10
+	img
+		width: 100%
+
+@media only screen and (min-width: 993px)
+	.block-2
+		&__grid
+			gap: 8rem
+			grid-template-columns: 42rem 1fr
+		.text-block
+			padding-top: 3rem
+			max-width: 62rem
+			&.pb-0
+				padding-top: 0
+				max-width: 71rem
+
+	.block-4
+		&__grid
+			gap: 8rem
+			grid-template-columns: 42rem 1fr
+		.text-block
+			padding-top: 8rem
+
+	.block-7
+		&__grid
+			grid-template-columns: 46rem 1fr
+		.text-block
+			padding-top: 1.6rem
+		&__footer
+			padding-top: 7.5rem
+
+.block-3
+	position: relative
+	&__icon
+		width: 6.5rem
+		height: 6.5rem
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		background: $orange
+		margin-right: 2rem
+		img, svg
+			max-width: 3.9rem
+			max-height: 3.9rem
+	&-item
+		display: flex
+		align-items: center
+		&:nth-child(2n)
+			.block-3__icon
+				background: $green
+
+@media only screen and (min-width: 768px)
+	.block-3
+		&__grid
+			grid-template-columns: repeat(2, 1fr)
+		&__list
+			li
+				&:not(:last-child)
+					margin-bottom: 3rem
+		.h2
+			margin-bottom: 4rem
+
+@media only screen and (min-width: 993px)
+	.block-3
+		.container
+			position: relative
+		&__grid
+			display: block
+		&__list
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			li
+				&:not(:last-child)
+					margin-bottom: 0
+		.h2
+			margin-bottom: 4rem
+		&__img
+			width: 50rem
+			height: 60rem
+			margin: 0 auto
+			display: block
+			margin-top: -2.5rem
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-item
+			text-align: center
+			flex-direction: column
+			position: absolute
+			&_1
+				top: 2rem
+				left: 34rem
+			&_2
+				top: 11rem
+				left: 14rem
+			&_3
+				top: 28rem
+				left: 5rem
+			&_4
+				top: 45rem
+				left: 20rem
+			&_5
+				top: 45rem
+				right: 12.5rem
+			&_6
+				top: 30rem
+				right: 6.5rem
+			&_7
+				top: 10rem
+				right: 15rem
+		&__icon
+			margin-bottom: 1.4rem
+			margin-right: 0
+
+.block-8
+	.h2
+		margin-bottom: 4rem
+
+@media only screen and (min-width: 993px)
+	.block-8
+		.h2
+			margin-bottom: 6rem
+
+.block-9
+	.h2
+		margin-bottom: 3rem
+	.card-slider
+		&-wrapper
+			margin-top: 4rem
+
+@media only screen and (min-width: 993px)
+	.block-9
+		text-align: center
+		&__content
+			max-width: 94rem
+			margin: 0 auto
+		.card-slider
+			&-wrapper
+				margin-top: 9rem
+
+.block-10
+	&__img
+		display: none
+
+@media only screen and (min-width: 768px)
+	.block-10
+		&__grid
+			grid-template-columns: 400rem 320rem
+			gap: 4rem
+		&__img
+			display: block
+
+@media only screen and (min-width: 993px)
+	.block-10
+		.h2
+			margin-bottom: 5.5rem
+		&__grid
+			grid-template-columns: 46rem 48rem
+			gap: 23rem
+		&__img
+			margin-top: -9rem
+
+.block-5
+	.container
+		position: relative
+	&__list
+		li
+			&:not(:last-child)
+				margin-bottom: 2rem
+
+@media only screen and (min-width: 993px)
+	.block-5
+		&__list
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			position: relative
+			z-index: 5
+			li
+				&:not(:last-child)
+					margin-bottom: 4.3rem
+				&:nth-child(1)
+					margin-left: 11.5rem
+				&:nth-child(2)
+					margin-left: 36rem
+				&:nth-child(3)
+					margin-left: 52rem
+				&:nth-child(4)
+					margin-left: 70rem
+		.icon-text
+			flex-direction: column
+			text-align: center
+			&__icon
+				margin-right: 0
+				margin-bottom: 1.5rem
+		&__footer
+			padding-top: 9rem
+		&__img-1
+			position: absolute
+			top: 6rem
+			right: 16rem
+			z-index: 0
+		&__img-2
+			position: absolute
+			top: 51.5rem
+			left: 9rem
+			z-index: 0
+	.block-6
+		.grid
+			width: 120rem
+			margin-left: auto
+			margin-right: auto
+
+.footer
+	padding-bottom: 6rem
+	font-size: 1.4rem
+	line-height: 1.25
+	.flex
+		letter-spacing: 0.05em
+		padding-top: 2rem
+	&__top
+		display: grid
+		gap: 3rem
+		position: relative
+		&::before, &::after
+			content: ''
+			display: block
+			width: 100%
+			height: 0.1rem
+			background: $accent
+		&::before
+			margin-bottom: 3rem
+		&::after
+			margin-top: 3rem
+	&__logo
+		margin-bottom: 6.4rem
+	.soc
+		>*
+			&:not(:last-child)
+				margin-right: 1rem
+		&-link
+			width: 4rem
+			height: 4rem
+			path
+				fill: #929965
+	a
+		text-decoration: none
+		&:hover
+			color: inherit
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__title
+		letter-spacing: 0.05em
+		font-weight: 600
+		text-transform: uppercase
+		margin-bottom: 1.1rem
+		font-size: 1.4rem
+		&:last-child
+			margin-bottom: 0
+		&+.footer__title
+			margin-top: 1.1rem
+	&__list
+		li
+			&:not(:last-child)
+				margin-bottom: 1.1rem
+			a
+				opacity: 0.7
+				&:hover
+					opacity: 1
+					color: $text
+		&+.footer__title
+			margin-top: 4rem
+	&__contacts
+		p
+			margin-bottom: 2.2rem
+		a
+			margin-bottom: 2.2rem
+
+@media only screen and (min-width: 993px)
+	.footer
+		&__top
+			display: flex
+			flex-wrap: wrap
+			gap: 0
+			justify-content: space-between
+
+.block-11
+	.h2
+		margin-bottom: 5rem
+
+.block-12
+	.h2
+		margin-bottom: 3.6rem
+
+@media only screen and (min-width: 993px)
+	.block-13
+		.container
+			position: relative
+			padding-bottom: 18rem
+		.h2
+			margin-bottom: 0
+		&__img
+			display: block
+			margin: 0 auto
+			width: 36rem
+			img
+				width: 100%
+		&__list
+			position: absolute
+			bottom: 0
+			left: 2rem
+			right: 2rem
+			height: 100%
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			z-index: 5
+			li
+				position: absolute
+				&:nth-child(1)
+					bottom: 43rem
+					width: 43.5rem
+					left: 0
+				&:nth-child(2)
+					bottom: 21.5rem
+					width: 43.5rem
+					left: 0
+				&:nth-child(3)
+					bottom: 0rem
+					width: 63rem
+					left: 50%
+					transform: translateX(-50%)
+				&:nth-child(4)
+					bottom: 21.5rem
+					width: 43.5rem
+					right: 0
+				&:nth-child(5)
+					bottom: 43rem
+					width: 43.5rem
+					right: 0
+		.icon-text
+			flex-direction: column
+			text-align: center
+			&__icon
+				margin-right: 0
+				margin-bottom: 1.5rem
+		&__footer
+			padding-top: 9rem
+		&__img-1
+			position: absolute
+			top: 6rem
+			right: 16rem
+			z-index: 0
+		&__img-2
+			position: absolute
+			top: 51.5rem
+			left: 9rem
+			z-index: 0

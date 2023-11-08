@@ -1,0 +1,679 @@
+.hidden
+	display: none
+.visible
+	overflow: visible
+
+// small element
+.center
+	text-align: center
+
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	border-radius: 1rem
+	border: 0.1rem solid $accent
+	text-decoration: none
+	font-size: 2rem
+	font-weight: 500
+	letter-spacing: 0.05em
+	line-height: 1.5
+	padding: 1rem 3rem 0.8rem
+	white-space: pre
+	&-min
+		font-size: 1.4rem
+		font-weight: 600
+	&:hover
+		color: inherit
+	&-border
+		&:hover
+			background: $accent
+	&-yellow
+		background: $accent
+		box-shadow: 0px 4px 20px rgba(255, 179, 58, 0.35)
+		&:hover
+			background: rgba(255, 179, 58, 0.7)
+			border-color: rgba(255, 179, 58, 0.2)
+			box-shadow: 0px 4px 5px rgba(255, 179, 58, 0.35)
+	&-border-gray
+		height: 5rem
+		min-width: 16.3rem
+		border-radius: 5rem
+		border-color: $text
+		&:hover
+			background: $text
+			color: #fff
+	&-white
+		background: #fff
+		border-color: #fff
+		&:hover
+			border-color: $accent
+	&-brs-20
+		border-radius: 2rem
+	&-brs-50
+		border-radius: 5rem
+
+h1, .h1
+	font-weight: 700
+	font-size: 6rem
+	line-height: 1.26
+	letter-spacing: 0.05em
+	margin-bottom: 3.5rem
+	text-transform: uppercase
+	&.fs-52
+		font-size: 5.2rem
+
+h2, .h2
+	font-weight: 600
+	font-size: 4.6rem
+	line-height: 1.1
+	text-transform: uppercase
+	letter-spacing: 0.05em
+	margin-bottom: 4rem
+
+h3, .h3
+	font-weight: 600
+	font-size: 2.4rem
+	line-height: 1.1
+	text-transform: uppercase
+	letter-spacing: 0.05em
+	margin-bottom: 1rem
+
+h4, .h4
+	font-weight: 400
+	font-size: 2.4rem
+	line-height: 1.4
+	margin-bottom: 1rem
+
+.title-border
+	display: flex
+	justify-content: flex-start
+	margin-bottom: 3rem
+	span
+		border-bottom: 0.4rem solid $green
+		padding-top: 1.4rem
+
+.text-block
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	b
+		font-weight: 600
+	p
+		margin-bottom: 2rem
+		&:last-child
+			margin-bottom: 0
+	.btn
+		margin-top: 1rem
+
+.center-header
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	position: relative
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		max-width: 610px
+	.h2
+		margin-bottom: 3rem
+	p
+		margin-bottom: 3rem
+		font-size: 1.8rem
+	.decor-arrow
+		margin-bottom: 4rem
+	.btn
+		width: 27rem
+
+.decor-arrow
+	width: 11rem
+	height: 5.5rem
+	background: url(../images/dist/icon/decor-arrow.svg) no-repeat center
+	background-size: contain
+	flex-shrink: 0
+	&_left
+		transform: rotate(200deg)
+	&_right
+		transform: scaleX(-1) rotate(200deg)
+
+.card
+	display: flex
+	flex-direction: column
+	text-align: center
+	padding: 3rem 4rem
+	background: $orange-80
+	border-radius: 5rem
+	position: relative
+	margin-top: 6rem
+	&:nth-child(2n)
+		background: $green
+	&_green
+		background: $green
+	&__img
+		width: 16.7rem
+		height: 16.7rem
+		border-radius: 50%
+		overflow: hidden
+		margin-top: -9rem
+		margin-bottom: 3rem
+		align-self: center
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transform: scale(1.05)
+	.btn
+		width: 24rem
+		align-self: center
+		margin-top: auto
+	.more
+		align-self: center
+		margin-top: auto
+	&_text
+		p
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				top: 0rem
+				left: -3rem
+				width: 3rem
+				height: 2.5rem
+				background: url(../images/dist/icon/dec.svg) no-repeat center
+				background-size: contain
+		.more
+			margin-top: 0
+			margin-bottom: 2rem
+		.h3
+			margin-bottom: 2rem
+	&_revers
+		background: $green
+		&:nth-child(2n)
+			background: $orange-80
+
+.more
+	line-height: 1.1
+	margin-bottom: 1rem
+	&:hover
+		color: #fff
+
+.soc
+	display: flex
+	&-link
+		width: 2rem
+		height: 2rem
+		border-radius: 50%
+		svg
+			width: 100%
+			height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&:not(:last-child)
+			margin-right: 1.5rem
+		&:hover
+			opacity: 0.6
+
+.i-icon
+	flex-shrink: 0
+
+.video
+	display: block
+	position: relative
+	overflow: hidden
+	border-radius: 5rem
+	border: 1rem solid $accent
+	width: 81rem
+	margin: 0 auto
+	padding-bottom: 35%
+	background: #7e7e7e
+	iframe
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+
+.card-slider
+	&-wrapper
+		position: relative
+	.swiper-slide
+		padding: 0 1rem
+		&:nth-child(2n)
+			.card
+				background: $green
+			
+	&__prev, &__next
+		top: 50%
+		transform: translateY(calc(50% - 3rem))
+	&__prev
+		left: 0
+	&__next
+		right: 0
+
+@media only screen and (min-width: 993px)
+	.card-slider
+		width: 120rem
+		margin-left: auto
+		margin-right: auto
+		.swiper-slide
+			padding: 0 2rem
+			height: auto
+			display: flex
+		&__prev
+			left: -5rem
+		&__next
+			right: -5rem
+
+.slide-nav
+	width: 4.8rem
+	height: 4.8rem
+	border-radius: 50%
+	background: #FEDC7A
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	z-index: 5
+	cursor: pointer
+	transition: 0.3s
+	&:hover
+		background: $green
+	&::before
+		content: ''
+		display: block
+		width: 2.7rem
+		height: 1.3rem
+	&__prev
+		&::before
+			background: url(../images/dist/icon/prev.svg) no-repeat center
+			background-size: contain
+	&__next
+		&::before
+			background: url(../images/dist/icon/next.svg) no-repeat center
+			background-size: contain
+
+.icon-text
+	display: flex
+	align-items: center
+	&__icon
+		width: 8rem
+		height: 8rem
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 2rem
+		background: $green
+		margin-right: 2rem
+		flex-shrink: 0
+		.icon-text_revers &
+			background: $orange
+			&:nth-child(2n)
+				background: $green
+		img
+			width: 100%
+	&:nth-child(2n)
+		.icon-text__icon
+			background: $orange
+
+.icon-text_revers
+	.icon-text__icon
+		background: $orange
+	&:nth-child(2n)
+		.icon-text__icon
+			background: $green
+
+.btn-scroll-up
+	background: transparent
+	padding: 0
+	border: none
+	display: flex
+	align-items: center
+	&::after
+		content: ''
+		width: 1.4rem
+		height: 1.8rem
+		background: url(../images/dist/icon/up.svg) no-repeat center
+		background-size: contain
+		margin-left: 1rem
+		display: block
+
+.mb-20
+	margin-bottom: 2rem
+
+.h3_mb
+	margin-bottom: 2rem
+
+.wpcf7-acceptance
+	label
+		display: flex
+		position: relative
+		>span
+			font-size: 1.6rem
+			padding-left: 4rem
+			position: relative
+			display: flex
+			align-items: center
+			cursor: pointer
+			min-height: 3rem
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				width: 3rem
+				height: 3rem
+				background-color: #fff
+				background-repeat: no-repeat
+				background-position: center
+				background-size: 1.5rem 1.5rem
+				border: 0.1rem solid $text
+		input
+			display: none
+			&:checked+span
+				&::before
+					background-image: url(../images/dist/icon/check.svg)
+
+.wpcf7-spinner
+	position: absolute !important
+	right: 1rem
+	bottom: 1rem
+
+.wpcf7-form
+	position: relative
+
+.wpcf7-response-output
+	margin: 0.5rem 0 !important
+	font-size: 1.4rem
+	border-width: 0.1rem
+
+.wpcf7-not-valid-tip
+	position: absolute
+	font-size: 1.4rem !important
+	max-width: 100%
+
+.form-wrapper
+	form
+		display: grid
+		gap: 3rem
+	.btn
+		margin-top: -0.5rem
+		width: auto
+		justify-self: start
+
+.input
+	width: 100%
+	height: 5rem
+	border-radius: 3rem
+	border: 0.1rem solid $text
+	padding: 0.5rem 4rem
+
+.textarea
+	height: 20rem
+	padding: 3rem 4rem
+
+// .nal
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	z-index: 10
+// 	width: 100%
+// 	height: 100%
+// 	background: url(../images/dist/nal.png) no-repeat top
+
+.castol-ol
+	list-style-type: none
+	counter-reset: num
+	li
+		position: relative
+		padding-left: 8.8rem
+		line-height: 1.4
+		max-width: 78rem
+		&:not(:last-child)
+			margin-bottom: 12rem
+			&::after
+				content: ''
+				display: block
+				width: 11.7rem
+				height: 7rem
+				background: url(../images/dist/icon/arrow-line.svg) no-repeat center
+				background-size: contain
+				top: 100%
+				margin-top: 2.5rem
+				left: 16rem
+				position: absolute
+		&::before
+			content: counter(num) ''
+			counter-increment: num
+			position: absolute
+			width: 6rem
+			height: 6rem
+			border-radius: 50%
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 2.4rem
+			font-weight: 600
+			line-height: 1.1
+			left: 0
+			top: 0
+			background: $green
+		&:nth-child(2n)
+			&::before
+				background: $orange
+		&:nth-child(2)
+			margin-left: 10rem
+		&:nth-child(3)
+			margin-left: 26rem
+		&:nth-child(4)
+			margin-left: 39rem
+		h3
+			font-size: 2.4rem
+			font-weight: 600
+			line-height: 1.4
+			margin-bottom: 1rem
+			text-transform: none
+	&_center
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 2rem
+			width: 24rem
+			height: 24.7rem
+			background: url(../images/dist/dec2.svg) no-repeat center
+			background-size: contain
+		li
+			&::before
+				top: 50%
+				transform: translateY(-50%)
+			&:nth-child(2)
+				margin-left: 8rem
+			&:nth-child(3)
+				margin-left: 20rem
+			&:nth-child(4)
+				margin-left: 30rem
+			&:nth-child(5)
+				margin-left: 40rem
+
+.block-15
+	.h2
+		margin-bottom: 8rem
+
+.tegs-row
+	padding: 5.5rem 0 6rem
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		display: flex
+		flex-wrap: wrap
+		li
+			margin: 0
+			&:not(:last-child)
+				margin-right: 0.3rem
+		a
+			text-decoration: none
+			letter-spacing: 0.05em
+			font-size: 1.4rem
+			line-height: 1.23
+			padding: 0 1rem
+			border: 0.1rem solid transparent
+			&:hover
+				border: 0.1rem solid $green
+				color: $text
+		.active
+			a
+				border: 0.1rem solid $green
+				color: $text
+
+.post-item
+	display: grid
+	grid-template-columns: 40rem 1fr
+	gap: 5rem
+	&:nth-child(2n)
+		.post-item__content
+			background: $orange-80
+	&:not(:last-child)
+		margin-bottom: 5.6rem
+	&__img
+		position: relative
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__content
+		padding: 3rem 6rem
+		border-radius: 5rem
+		background: $green
+	&__info
+		font-size: 1rem
+		line-height: 1.4
+		margin-bottom: 2.3rem
+	&__title
+		font-size: 3.6rem
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		font-weight: 400
+		margin-bottom: 2.3rem
+		a
+			text-decoration: none
+			color: inherit
+	p
+		font-size: 1.7rem
+		line-height: 1.4
+	&__footer
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+
+@media only screen and (min-width: 768px)
+	.block-4
+		&_castom
+			.h2
+				margin-bottom: 2.6rem
+			.h3
+				font-weight: 400
+				font-size: 2.4rem
+				line-height: 1.4
+				margin-bottom: 2.5rem
+				margin-left: 39rem
+				text-transform: none
+			.btn
+				width: 24rem
+		&__grid-1
+			grid-template-columns: 41.2rem 62rem
+			gap: 9.4rem
+			.text-block
+				padding-top: 2rem
+			.btn
+				margin-top: auto
+		&__grid-2
+			grid-template-columns: 66.1rem 46rem
+			gap: 13.9rem
+			.text-block
+				grid-column: 1 / 2
+				grid-row: 1 / 2
+				padding-top: 0
+			.block-4__img
+				grid-column: 2 / 3
+				grid-row: 1 / 2
+				padding: 2.6rem 2.6rem 0 0
+				&::before
+					top: 0
+					right: 0
+					left: 8rem
+					bottom: 2rem
+			.btn
+				margin-top: auto
+		&__grid-3
+			grid-template-columns: 53.2rem 54rem
+			gap: 13.9rem
+
+.contacts-page
+	padding-top: 7rem
+	padding-bottom: 5rem
+	&__item
+		position: relative
+		padding-left: 6rem
+		font-size: 2.2rem
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		a
+			text-decoration: none
+			color: $accent
+		.btn
+			margin-top: 2rem
+			color: $text
+		&:not(:last-child)
+			margin-bottom: 5rem
+		i
+			position: absolute
+			left: 0
+			top: 0
+			width: 3rem
+		svg
+			width: 100%
+			path
+				fill: $accent
+
+.policies
+	padding-top: 7rem
+	line-height: 1.4
+	&__sup
+		margin-bottom: 6rem
+	h1
+		font-size: 5.2rem
+		line-height: 1.1
+		margin-bottom: 3rem
+	h2
+		font-weight: 700
+		font-size: 4rem
+		line-height: 1.1
+		margin-bottom: 6rem
+		text-transform: none
+	h3
+		font-weight: 700
+		font-size: 1.8rem
+		line-height: 1.4
+		margin-bottom: 2rem
+		text-transform: none
+	p, ul, ol
+		&:not(:last-child)
+			margin-bottom: 4rem
+	ul, ol
+		margin-left: 5rem
+
+	.img-center
+		margin: 4rem auto 4rem
+		display: block

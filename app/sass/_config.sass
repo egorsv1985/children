@@ -1,0 +1,36 @@
+// USER VARIABLES SECTION
+
+$accent: #FFB33A // Accent Color
+$green: #CED881
+$orange: #FED359
+$orange-80: rgba(254, 210, 89, 0.8)
+$fontsize: 1.8rem // Body Font Size
+$text: #121212 // Text Color
+$lineheight: 1.4 // Document Line Height
+$userfont: Poppins, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$gap: 4rem
+$el-mb: 2rem
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/swiper/swiper-bundle'
+//@import 'app/vendor/micromodal/micromodal'
+//@import 'node_modules/@fancyapps/ui/dist/fancybox'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff2')
+		// font-display: swap // Uncomment to initially display system fonts
+
+@include font('Poppins', normal, 400, '../fonts/Poppins-Regular.woff2')
+@include font('Poppins', normal, 500, '../fonts/Poppins-Medium.woff2')
+@include font('Poppins', normal, 600, '../fonts/Poppins-SemiBold.woff2')
+@include font('Poppins', normal, 700, '../fonts/Poppins-Bold.woff2')
